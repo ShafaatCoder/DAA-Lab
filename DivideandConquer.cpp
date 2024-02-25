@@ -38,7 +38,7 @@ MinMax findMinMax(int arr[], int low, int high) {
 }
 
 int main() {
-    int arr[] = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5};
+    int arr[] = {1,2,3,4,5,6,7,8,9,10};
     int size = sizeof(arr) / sizeof(arr[0]);
 
     MinMax result = findMinMax(arr, 0, size - 1);
@@ -47,4 +47,5 @@ int main() {
     std::cout << "Maximum element: " << result.max << std::endl;
 
     return 0;
+    //CONTRIBUTED BY SHAFAAT
 }
