@@ -10,11 +10,11 @@ struct Job {
     int profit;
 };
 
-bool compareJobs(const Job &a, const Job &b) {
+bool compareJobs(Job &a,Job &b) {
     return (a.profit > b.profit);
 }
 
-void jobSequencing(const vector<Job> &jobs) {
+void jobSequencing(vector<Job> &jobs) {
     int n = jobs.size();
     vector<int> result(n, -1); // Result array to store the scheduled jobs
     vector<bool> slot(n, false); // Array to check if a slot is occupied
@@ -42,6 +42,15 @@ void jobSequencing(const vector<Job> &jobs) {
         }
     }
     cout << endl;
+     int sum=0;
+    cout<<"Total profit = ";
+    for(int i =0;i<n;++i){
+        if(slot[i]){
+            sum+=jobs[result[i]].profit;
+        }
+    }
+    cout<<sum;
+    
 }
 
 int main() {
@@ -55,6 +64,6 @@ int main() {
     };
 
     jobSequencing(jobs);
-
-    return 0;
+                            //Contributed By Shafaat
+    return 0;    
 }
